@@ -13,7 +13,7 @@
 
 <!-- Modal window for photo detail -->
 <p-dialog header="{{photoDetails.id}}" [(visible)]="showPhotoDetails" *ngIf="photoDetails">
-    <img src="{{photoDetails.full_picture}}" />
+    <img src="{{photoDetails.full_picture}}" class="full-image" />
     <p class="details-description">Author: {{photoDetails.author}}</p>
     <p class="details-description">Camera: {{photoDetails.camera}}</p>
     <p class="details-description">Tags: {{photoDetails.tags}}</p>

@@ -16,3 +16,8 @@
 .paginator {
     margin-top: 20px;
 }
+
+.full-image {
+    max-width: 100%;
+    max-height: 100%;
+}
