@@ -1,0 +1,20 @@
+<!-- Photos list -->
+<div class="p-d-flex p-flex-wrap p-jc-center">
+    <ng-container *ngFor="let item of photos">
+        <div class="p-mr-2 p-order-3 p-order-md-2"><img class="cropped-img" src="{{item.cropped_picture}}"
+                (click)="this.getPhotoDetails(item.id)"></div>
+    </ng-container>
+</div>
+
+<div class="paginator">
+    <p-paginator [rows]="10" [totalRecords]="100" (onPageChange)="paginate($event)" #paginator></p-paginator>
+</div>
+
+
+<!-- Modal window for photo detail -->
+<p-dialog header="{{photoDetails.id}}" [(visible)]="showPhotoDetails" *ngIf="photoDetails">
+    <img src="{{photoDetails.full_picture}}" />
+    <p class="details-description">Author: {{photoDetails.author}}</p>
+    <p class="details-description">Camera: {{photoDetails.camera}}</p>
+    <p class="details-description">Tags: {{photoDetails.tags}}</p>
+</p-dialog>

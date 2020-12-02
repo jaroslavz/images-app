@@ -1,0 +1,18 @@
+
+.cropped-img {
+    padding-bottom: 8px;
+}
+
+.cropped-img:hover {
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.details-description {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.paginator {
+    margin-top: 20px;
+}
